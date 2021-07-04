@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+body{
+    height: 2000px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.content-left {
+    height: 100vh;
+    width: 45%;
+    background-color: #5c00a1;
+    position: fixed;
+    left: 0px;
+    animation: bg 1s ease-in;
+}
+.content-right {
+    height: 100vh;
+    width: 55%;
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+}
+.svg {
+    height: 350px;
+    width: 350px;
+    position: fixed;
+    top: 60px;
+    left: 30%;
+    background-color: #5c00a1;
+    border-radius: 50%;
+    z-index: 1000;
+}
+#Transparent_Ring{
+    stroke-dasharray: 816px;
+    stroke-dashoffset: 816px;
+}
+#inner-ring{
+    stroke-dasharray: 816px;
+    stroke-dashoffset: 816px;
+}
+@keyframes anim {
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes dot1{
+    to{
+        stroke-dashoffset: 680px;
+    }
+}
+@keyframes dot2{
+    from{
+        stroke-dashoffset: 680px;
+    }
+    to{
+        stroke-dashoffset: 544px;
+    }
+}
+@keyframes dot3{
+    from{
+        stroke-dashoffset: 544px;
+    }
+    to{
+        stroke-dashoffset: 408px;
+    }
+}
+@keyframes dot4{
+    from{
+        stroke-dashoffset: 408px;
+    }
+    to{
+        stroke-dashoffset: 272px;
+    }
+}
+@keyframes dot5{
+    from{
+        stroke-dashoffset: 272px;
+    }
+    to{
+        stroke-dashoffset: 136px;
+    }
+}
+@keyframes dot6{
+    from{
+        stroke-dashoffset: 136px;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+#Dots{
+    transform: translate(-119px,47px);
+}
+#Dots1{
+    transform: translate(0,0);
+}
+#Dots2{
+    transform: translate(121px,49px);
+}
+#Dots3{
+    transform: translate(173px,171px);
+}
+#Dots4{
+    transform: translate(122px,295px);
+}
+#Dots5{
+    transform: translate(0px,344px);
+}
+#Dots6{
+    transform: translate(-122px,294px);
+} 
+
+.top-box{
+    z-index: 2000;
+    position: fixed;
+    right: 53%;
+    top: 180px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.top-box p:nth-child(1){
+    position: relative;
+    text-align: left;
+    margin: 0;
+    
+}
+.top-box p:nth-child(2){
+    position: relative;
+    text-align: left;
+    font-weight: 900;
+    font-size: 50px;
+    margin: 0;
+}
+.top-box p:nth-child(3){
+    position: relative;
+    text-align: right;
+    margin: 0;
+}
+.middle-box {
+    z-index: 2000;
+    position: fixed;
+    left: 4%;
+    bottom: 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.middle-box img{
+    width: 75%;
+}
+.middle-box p:nth-child(2){
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.middle-box p:nth-child(3){
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.bottom-box{
+    z-index: 2000;
+    position: fixed;
+    left: 4%;
+    bottom: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    justify-content: space-between;
+}
+.bottom-box :nth-child(1){
+
+}
+.bottom-box :nth-child(2){
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.images{
+    display: flex;
+}
+.one {
+    width: 100%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+}
+.one img{
+    width: 350px;
+}
+.first{
+    visibility: visible;
+}
+.second{
+    visibility: hidden;
+}
+.third{
+    visibility: hidden;
+}
+.four{
+    visibility: hidden;
+}
+.four img{
+    width: 30%;
+}
+.five{
+    visibility: hidden;
+}
+.five img{
+    width: 27%;
+}
+.six{
+    visibility: hidden;
+}
+.seven{
+    visibility: hidden;
+}
+.seven img{
+
+}
+
+@keyframes topDown {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes downTop {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
