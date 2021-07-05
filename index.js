@@ -10,31 +10,25 @@ window.addEventListener("scroll", function(e) {
     
     var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     var scp = scrollPercentage * 100;
-    var dot1 = document.querySelector('#Dots1Fill ');
-    var dot2 = document.querySelector('#Dots2Fill ');
-    var dot3 = document.querySelector('#Dots3Fill ');
-    var dot4 = document.querySelector('#Dots4Fill ');
-    var dot5 = document.querySelector('#Dots5Fill ');
-    var dot6 = document.querySelector('#Dots6Fill ');
-    var dotTro1 = document.querySelector('#Dots1Tro ');
-    var dotTro2 = document.querySelector('#Dots2Tro ');
-    var dotTro3 = document.querySelector('#Dots3Tro ');
-    var dotTro4 = document.querySelector('#Dots4Tro ');
-    var dotTro5 = document.querySelector('#Dots5Tro ');
-    var dotTro6 = document.querySelector('#Dots6Tro ');
+    
+
+    for(i=1;i<7;i++){
+        eval( "var " + "dot" + i + " = " + `document.querySelector('#Dots${i}Fill ')` )
+    }
+
+    for(i=1;i<7;i++){
+        eval( "var " + "dotTro" + i + " = " + `document.querySelector('#Dots${i}Tro ')` )
+    }
     var contentLeft = document.querySelector('#content-left ');
     var contentright = document.querySelector('#content-right ');
     var svg = document.querySelector('#svg');
-    var first = document.querySelectorAll('.first');
-    var second = document.querySelectorAll('.second');
-    var second_p = document.querySelectorAll('.second p');
-    var third = document.querySelectorAll('.third');
-    var four = document.querySelectorAll('.four');
-    var five = document.querySelectorAll('.five');
-    var six = document.querySelectorAll('.six');
-    var seven = document.querySelectorAll('.seven');
 
-    if(scp > 0 && scp< 16.66) {
+    const arr = ["first","second","third","four","five","six","seven"];
+    for(i=0;i<8;i++){
+        eval( "var " + arr[i] + " = " + `document.querySelectorAll('.${arr[i]}')` )
+    }
+
+    if(scp >= 0 && scp<= 16.66) {
         path.style.animation = "";
         dot1.style.opacity = 0.4;
         dot1.style.fill = "rgb(255,255,255)"
@@ -67,7 +61,7 @@ window.addEventListener("scroll", function(e) {
         }
         
     }
-    if(scp > 16.66 && scp< 33.33) {
+    if(scp > 16.66 && scp<= 33.33) {
         
         path.style.animation = "dot1 0.3s ease forwards";
         dot1.style.opacity = 1;
@@ -96,7 +90,7 @@ window.addEventListener("scroll", function(e) {
         })
         for(i = 0 ; i < first.length ; i++){
             first[i].style.visibility  = "hidden";
-            second[i].style.animation = ""
+            first[i].style.animation = ""
         }
         for(i = 0 ; i < second.length ; i++){
             second[i].style.visibility  = "visible";
@@ -108,7 +102,7 @@ window.addEventListener("scroll", function(e) {
         }
         
     }
-    if(scp > 33.33 && scp< 50) {
+    if(scp > 33.33 && scp<= 50) {
         path.style.animation = "dot2 0.3s ease forwards";
         dot2.style.opacity = 1
         dot2.style.fill = "rgb(0,146,255)"
@@ -150,7 +144,7 @@ window.addEventListener("scroll", function(e) {
             first[i].style.visibility  = "hidden";
         }
     }
-    if(scp > 50 && scp< 66.66) {
+    if(scp > 50 && scp<= 66.66) {
         path.style.animation = "dot3 0.3s ease forwards";
         dot3.style.opacity = 1
         dot3.style.fill = "rgb(0,146,255)"
@@ -196,7 +190,7 @@ window.addEventListener("scroll", function(e) {
         }
 
     }
-    if(scp > 66.66 && scp< 83.33) {
+    if(scp > 66.66 && scp<= 83.33) {
         path.style.animation = "dot4 0.3s ease forwards";
         dot4.style.opacity = 1
         dot4.style.fill = "rgb(0,146,255)"
@@ -238,7 +232,7 @@ window.addEventListener("scroll", function(e) {
             first[i].style.visibility  = "hidden";
         }
     }
-    if(scp > 83.33 && scp < 100) {
+    if(scp > 83.33 && scp <= 100) {
         path.style.animation = "dot5 0.3s ease forwards";
         dot5.style.opacity = 1
         dot5.style.fill = "rgb(0,146,255)"

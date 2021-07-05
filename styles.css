@@ -2,9 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 body{
-    height: 2000px;
+    height: 2800px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;; 
+    border-radius : 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .content-left {
     height: 100vh;
@@ -115,7 +137,7 @@ body{
 .top-box{
     z-index: 2000;
     position: fixed;
-    right: 53%;
+    right: 55%;
     top: 180px;
     color: white;
     display: flex;
@@ -230,7 +252,9 @@ body{
 .seven img{
 
 }
-
+.mobile{
+    display: none;
+}
 @keyframes topDown {
     from{
         transform: translateY(-100px);
@@ -249,5 +273,103 @@ body{
     to{
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+@media screen and (max-width : 1024px) {
+    .content-left{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        height: 100%;
+    }
+    .mobile-carousel{
+        height: 100%;
+    }
+    body{
+        height: 100vh;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .top-mobile{
+        height: 50%;
+    }
+    .top-mobile-one{
+        background-color: #ccccce;
+    }
+    .top-mobile-two{
+        background-color: #19005e;
+    }
+    .top-mobile-three{
+        background-color: #151345;
+    }
+    .top-mobile-four{
+        background-color: #0d141c;
+    }
+    .top-mobile-five{
+        background-color: #3addda;
+    }
+    .top-mobile-six{
+        background-color: white;
+    }
+    .top-mobile-seven{
+        background-color: #10ce6a;
+    }
+
+    .bottom-mobile-one{
+        background-color: #5c00a1;
+    }
+    .bottom-mobile-two{
+        background: rgb(182,19,172);
+        background: linear-gradient(121deg, rgba(182,19,172,1) 0%, rgba(41,10,86,1) 100%);
+    }
+    .bottom-mobile-three{
+        background-color: #100f39;
+    }
+    .bottom-mobile-four{
+        background-color: #17263b;
+    }
+    .bottom-mobile-five{
+        background-color: #184d9d;
+    }
+    .bottom-mobile-six{
+        background-color: #06298d;
+    }
+    .bottom-mobile-seven{
+        background-color: #0b944e;
+    }
+    .bottom-mobile{
+        height: 50%;
+        color: white;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-left: 20px;
+        position: relative;
+        z-index: 2000;
+        display: flex;
+        padding-right: 20px;
+    }
+    .mobile-large-font{
+        font-size: 30px;
+        margin: 0;
+        font-weight: 900;
+    }
+    .carousel .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        z-index: 7000;
+    }
+    .bottom-mobile-text{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-self: center;
+    }
+    .mobile-button{
+        outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 11px 11px;
+    margin-left: 19px;
+    color: white;
     }
 }
