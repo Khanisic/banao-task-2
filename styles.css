@@ -5,6 +5,7 @@ body{
     height: 2800px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
+
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -19,6 +20,7 @@ body{
 ::-webkit-scrollbar-thumb:window-inactive {
     background: none;
 }
+
 .content-left {
     height: 100vh;
     width: 45%;
@@ -42,16 +44,16 @@ body{
     left: 30%;
     background-color: #5c00a1;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 10;
 }
 #Transparent_Ring{
     stroke-dasharray: 816px;
     stroke-dashoffset: 816px;
 }
-#inner-ring{
+/* #inner-ring{
     stroke-dasharray: 816px;
     stroke-dashoffset: 816px;
-}
+} */
 @keyframes anim {
     to{
         stroke-dashoffset: 0px;
@@ -102,6 +104,10 @@ body{
     to{
         stroke-dashoffset: 0;
     }
+}
+.dots-nav{
+    z-index: 2000;
+    cursor: pointer;
 }
 #Dots{
     transform: translate(-119px,47px);
@@ -246,20 +252,20 @@ body{
 .mobile{
     display: none;
 }
-@keyframes topDown {
+@keyframes up {
     from{
-        transform: translateY(-100px);
-        opacity: 0;
+        transform: translateY(-50px);
+        opacity: 0.4;
     }
     to{
         transform: translateY(0px);
         opacity: 1;
     }
 }
-@keyframes downTop {
+@keyframes down {
     from{
-        transform: translateY(100px);
-        opacity: 0;
+        transform: translateY(60px);
+        opacity: 0.4;
     }
     to{
         transform: translateY(0px);
