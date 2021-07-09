@@ -9,8 +9,19 @@ path.getBoundingClientRect();
 window.scroll(0,1)
 
 function scrollToThis(length){
-    window.scroll(0,length*339)
+    window.scroll(0,length*335)
+    
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    console.log(length*335 , h)
+
 }
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+console.log(w,h)
+
 window.addEventListener("scroll", function(e) {
     
     var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -64,6 +75,7 @@ window.addEventListener("scroll", function(e) {
 
 //ONE
     if(scp >= 0 && scp<= 16.66) {
+
         path.style.animation = "";
         dot1.style.opacity = 0.4;
         dot1.style.fill = "rgb(255,255,255)"
@@ -140,7 +152,9 @@ window.addEventListener("scroll", function(e) {
 
 
     }
-    //FOUR
+    function four(){
+        
+    }
     if(scp > 50 && scp<= 66.66) {
         path.style.animation = "dot3 0.3s ease forwards";
         dot3.style.opacity = 1
@@ -170,31 +184,32 @@ window.addEventListener("scroll", function(e) {
     //FIVE
     if(scp > 66.66 && scp<= 83.33) {
         path.style.animation = "dot4 0.3s ease forwards";
-        dot4.style.opacity = 1
-        dot4.style.fill = "rgb(0,146,255)"
-        dot5.style.opacity = 0.4;
-        dot5.style.fill = "rgb(255,255,255)"
-        dotTro4.style.opacity = 1;
-        dotTro5.style.opacity = 0;
-        TweenMax.fromTo( contentLeft, 2, {backgroundColor : '#17263b'},{backgroundColor : '#184d9d'})
-        TweenMax.fromTo( svg, 2, {backgroundColor : '#17263b'},{backgroundColor : '#184d9d'})
-        TweenMax.fromTo( contentright, 2, {backgroundColor : '#0d141c'},{backgroundColor : '#3addda'})
-
-        for(i = 0 ; i < six.length ; i++){six[i].style.visibility  = "hidden";}
-
-        for(i = 0 ; i < four.length ; i++){four[i].style.visibility  = "hidden";}
-
-        for(i = 0 ; i < five.length ; i++){five[i].style.visibility  = "visible";}
+            dot4.style.opacity = 1
+            dot4.style.fill = "rgb(0,146,255)"
+            dot5.style.opacity = 0.4;
+            dot5.style.fill = "rgb(255,255,255)"
+            dotTro4.style.opacity = 1;
+            dotTro5.style.opacity = 0;
+            TweenMax.fromTo( contentLeft, 2, {backgroundColor : '#17263b'},{backgroundColor : '#184d9d'})
+            TweenMax.fromTo( svg, 2, {backgroundColor : '#17263b'},{backgroundColor : '#184d9d'})
+            TweenMax.fromTo( contentright, 2, {backgroundColor : '#0d141c'},{backgroundColor : '#3addda'})
     
-        for(i = 0 ; i < upFive.length ; i++){upFive[i].style.animation = "up 0.9s ease forwards"}
-        for(i = 0 ; i < downFive.length ; i++){downFive[i].style.animation = "down 0.9s ease forwards"}
-
-
-        for(i = 0 ; i < upFour.length ; i++){upFour[i].style.animation = ""}
-        for(i = 0 ; i < downFour.length ; i++){downFour[i].style.animation = ""}
-
-        for(i = 0 ; i < upSix.length ; i++){upSix[i].style.animation = ""}
-        for(i = 0 ; i < downSix.length ; i++){downSix[i].style.animation = ""}
+            for(i = 0 ; i < six.length ; i++){six[i].style.visibility  = "hidden";}
+    
+            for(i = 0 ; i < four.length ; i++){four[i].style.visibility  = "hidden";}
+    
+            for(i = 0 ; i < five.length ; i++){five[i].style.visibility  = "visible";}
+        
+            for(i = 0 ; i < upFive.length ; i++){upFive[i].style.animation = "up 0.9s ease forwards"}
+            for(i = 0 ; i < downFive.length ; i++){downFive[i].style.animation = "down 0.9s ease forwards"}
+    
+    
+            for(i = 0 ; i < upFour.length ; i++){upFour[i].style.animation = ""}
+            for(i = 0 ; i < downFour.length ; i++){downFour[i].style.animation = ""}
+    
+            for(i = 0 ; i < upSix.length ; i++){upSix[i].style.animation = ""}
+            for(i = 0 ; i < downSix.length ; i++){downSix[i].style.animation = ""}
+        
     }//SIX
     if(scp > 83.33 && scp <= 100) {
         path.style.animation = "dot5 0.3s ease forwards";
